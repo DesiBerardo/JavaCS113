@@ -34,19 +34,19 @@ public class Book
         return "Title: " + title + " pages: " + pages;
     }
 
-    public boolean equals(Book b2)
+    public boolean equals(Book b1, Book b2)
     {
-        if (getPages() == b2.getPages() && getTitle().equals(b2.getTitle()))
+        if (b1.getPages() == b2.getPages() && b1.getTitle().equals(b2.getTitle()))
             return true;
         else
             return false;
     }
 
-    public int compareTo(Book b2)
+    public int compareTo(Book b1,Book b2)
     {
-        if (getPages() < b2.getPages())
+        if (b1.getPages() < b2.getPages())
             return -1;
-        else if (getPages() > b2.getPages())
+        else if (b1.getPages() > b2.getPages())
         {
             return 1;
         }
