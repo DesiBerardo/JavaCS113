@@ -42,7 +42,7 @@ public class Book
             return false;
     }
 
-    public int compareTo(Book b1, Book b2)
+    public int compareTo(Book b1,Book b2)
     {
         if (b1.getPages() < b2.getPages())
             return -1;
