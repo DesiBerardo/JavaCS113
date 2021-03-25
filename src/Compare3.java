@@ -1,6 +1,6 @@
 public class Compare3
 {
-    public Comparable largest(Comparable x, Comparable y, Comparable z)
+  //  public Comparable largest(Comparable x, Comparable y, Comparable z)
     {
         //secret to finding largest of 3
 
