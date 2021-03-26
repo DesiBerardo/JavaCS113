@@ -9,8 +9,6 @@ public class TestArrays
             numArray[i] = numArray[numArray.length - 1 - i];
             numArray[numArray.length - 1 - i] = temp;
         }
-        //for (int i = 0; i < numArray.length; i++)
-          //  System.out.print(numArray[i]);
     }
     public  static int[] anotherArrayMethod(int[] numArray)
     {

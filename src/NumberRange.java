@@ -17,6 +17,9 @@ public class NumberRange
         }
 
         for (int i = 0; i < range.length; i++)
-            System.out.println(i + ": " + range[i]);
+        {
+            if(range[i] > 0)
+                System.out.println(i + ": " + range[i]);
+        }
     }
 }
