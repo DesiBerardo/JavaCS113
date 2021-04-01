@@ -9,18 +9,23 @@ import java.util.Random;
 //reversed, print the array again.
 public class Lab
 {
+    public static boolean isPalindrome(String s)
+    {
+        if (s.length() <= 1)
+            return true;
+        else if (s.charAt(0) == s.charAt(s.length() - 1))
+        {
+            String middle = s.substring(1, s.length() -1);
+            if (isPalindrome(middle) && s.charAt(0) == s.charAt(s.length() -1))
+                return true;
+        }
+            return false;
+    }
     public static void main(String[] args)
     {
-        Random rand = new Random();
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
 
-        int number = rand.nextInt(3);
-
-        if (number == 0)
-            System.out.println("Oxtail ya fuckin nerd");
-        else if (number == 1)
-            System.out.println("Applebapple ya fuckin nerd");
-        else if (number == 2)
-            System.out.println("Costellos ya fuckin nerd");
-
+        System.out.println(isPalindrome(s));
     }
 }
