@@ -25,7 +25,6 @@ public class DigitPlay
             System.out.println ();
             printDigits(num);
             System.out.println();
-            System.out.println("fib: " + fib(num));
 
         }
     }
@@ -57,13 +56,11 @@ public class DigitPlay
         }
     }
 
-    public static int fib(int num)
+   /* public static int fib(int num)
     {
         if (num == 0 || num == 1)
             return num;
         else
             return fib(num - 1) + fib(num -2);
-    }
-
-
+    }*/
 }
