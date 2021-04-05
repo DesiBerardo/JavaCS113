@@ -6,8 +6,8 @@ public class TestRecursion
             System.out.println(num);
         else
         {
-            System.out.println(num % 10);
             printDigits(num / 10);
+            System.out.println(num % 10);
         }
     }
 
@@ -17,11 +17,11 @@ public class TestRecursion
             return array[0];
         else
         {
-            return + sumArray(array, i - 1);
+            return array[i] + sumArray(array, i - 1);
         }
     }
 
-    public static void pascalTriangle()
+    public static void pascalTriangle(int n)
     {
 
     }
@@ -31,5 +31,6 @@ public class TestRecursion
         int[] numArray = {1,2,3,4,5};
         printDigits(12345);
         System.out.println(sumArray(numArray, numArray.length - 1));
+
     }
 }
