@@ -10,7 +10,7 @@ public class TestRecursion
             System.out.println(num % 10);
         }
     }
-
+//yeet
     public static int sumArray(int[] array, int i)
     {
         if (i < 1)
