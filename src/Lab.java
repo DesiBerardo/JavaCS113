@@ -9,23 +9,19 @@ import java.util.Random;
 //reversed, print the array again.
 public class Lab
 {
-    public static boolean isPalindrome(String s)
+    public static double[] bestInMonths(double[][] famCellBills)
     {
-        if (s.length() <= 1)
-            return true;
-        else if (s.charAt(0) == s.charAt(s.length() - 1))
-        {
-            String middle = s.substring(1, s.length() -1);
-            if (isPalindrome(middle) && s.charAt(0) == s.charAt(s.length() -1))
-                return true;
-        }
-            return false;
-    }
-    public static void main(String[] args)
-    {
-        Scanner in = new Scanner(System.in);
-        String s = in.next();
+        int numColums = famCellBills[0].length;
+        double[] result = new double[numColums];
 
-        System.out.println(isPalindrome(s));
+        for (int col = 0; col < numColums; col++)
+        {
+            double min = famCellBills[0][col];
+            for (int row = 1; row < famCellBills.length; row++)
+                if (famCellBills[row][col] < min)
+                    min = famCellBills[row][col];
+                result[col] = min;
+        }
+        return result;
     }
 }
