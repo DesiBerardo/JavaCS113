@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 
 public class Kennel
@@ -27,3 +27,4 @@ public class Kennel
         System.out.println("Age in human years for " + dog2.getName() + " is " + dog2.toPersonYears());
     }
 }
+*/

@@ -25,6 +25,13 @@ public class Circle
         this.radius = radius;
     }
 
+    public boolean liesOnCircle(Point p)
+    {
+        if (p.distance(center) == radius)
+            return true;
+        return false;
+    }
+
 
     public String toString() {
         return "Circle has a radius of " + radius + " and a center of " + center;

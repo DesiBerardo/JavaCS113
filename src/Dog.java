@@ -1,41 +1,34 @@
-public class Dog
+// ****************************************************************
+// Dog.java
+//
+// A class that holds a dog's name and can make it speak.
+//
+// ****************************************************************
+public abstract class Dog
 {
-    private String name;
-    private int age;
-
-    public Dog()
+    private int breedWeight = 75;
+    protected String name;
+    // ------------------------------------------------------------
+// Constructor -- store name
+// ------------------------------------------------------------
+    public Dog(String name)
     {
-        name = "dog";
-        age = 0;
+        this.name = name;
     }
-
+    // ------------------------------------------------------------
+// Returns the dog's name
+// ------------------------------------------------------------
     public String getName()
     {
         return name;
     }
-
-    public int getAge()
+    // ------------------------------------------------------------
+// Returns a string with the dog's comments
+// ------------------------------------------------------------
+    public String speak()
     {
-        return age;
+        return "Woof";
     }
 
-    public void setAge(int newAge)
-    {
-        age = newAge;
-    }
-
-    public void setName(String newName)
-    {
-        name = newName;
-    }
-
-    public int toPersonYears()
-    {
-        return age * 7;
-    }
-
-    public String toString()
-    {
-        return  "name: " + name + ", age: " + age;
-    }
+    public abstract int avgBreedWeight();
 }
