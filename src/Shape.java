@@ -1,0 +1,16 @@
+abstract public class Shape
+{
+    protected String shapeName;
+
+    public Shape(String n)
+    {
+        shapeName = n;
+    }
+
+    public abstract double area();
+
+    public String toString()
+    {
+        return shapeName;
+    }
+}
