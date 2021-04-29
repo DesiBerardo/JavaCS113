@@ -7,21 +7,33 @@ import java.util.Random;
 //which they are printed; actually change the way they are stored in the array. Do not create a second array; just rearrange the
 //elements within the array you have. (Hint: Swap elements that need to change places.) When the elements have been
 //reversed, print the array again.
+
+
+
 public class Lab
 {
-    public static double[] bestInMonths(double[][] famCellBills)
+    public static boolean checkString(String s)
     {
-        int numColums = famCellBills[0].length;
-        double[] result = new double[numColums];
+        if (s.length() <= 1)
+            return true;
+        else
+            return s.charAt(0) == s.charAt(1) && checkString(s.substring(1));
+    }
 
-        for (int col = 0; col < numColums; col++)
-        {
-            double min = famCellBills[0][col];
-            for (int row = 1; row < famCellBills.length; row++)
-                if (famCellBills[row][col] < min)
-                    min = famCellBills[row][col];
-                result[col] = min;
-        }
-        return result;
+    public static int recProd(int[] array, int count)
+    {
+        if (count ==1)
+            return array[0];
+        return array[count - 1] * recProd(array, count -1);
+    }
+
+    public static int power(int base, int expo)
+    {
+        if (expo == 0)
+            return 1;
+        else if (expo == 1)
+            return base;
+        else
+        return power(base, expo - 1) * base;
     }
 }
